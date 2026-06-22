@@ -1,0 +1,533 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.75)
+    ),
+    url("./assets/background.jpg");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+
+  color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:20px 50px;
+
+  background:rgba(0,0,0,0.4);
+
+  backdrop-filter:blur(10px);
+
+  position:sticky;
+  top:0;
+}
+
+.navbar h1,
+.navbar-brand{
+  font-size:2rem;
+  color:white;
+  text-decoration:none;
+}
+
+.navbar-brand{
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  cursor:pointer;
+}
+
+.navbar ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+}
+
+.navbar a:hover{
+  opacity:0.85;
+}
+
+.navbar li{
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding:150px 20px;
+}
+
+.hero h1{
+  font-size:70px;
+  margin-bottom:20px;
+
+  text-shadow:0 0 20px black;
+}
+
+.hero p{
+  font-size:24px;
+  color:#e5e7eb;
+}
+
+.hero button{
+  margin-top:30px;
+
+  padding:15px 30px;
+
+  border:none;
+  border-radius:10px;
+
+  background:#ef4444;
+
+  color:white;
+
+  font-size:18px;
+
+  cursor:pointer;
+}
+
+.hero button:hover{
+  transform:scale(1.05);
+}
+
+/* SECTIONS */
+
+section{
+  padding:60px 40px;
+  text-align:center;
+}
+
+section h2{
+  font-size:40px;
+  margin-bottom:30px;
+}
+
+/* SPORTS CARDS */
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  display:block;
+  width:320px;
+  color:inherit;
+  text-decoration:none;
+
+  background:rgba(0,0,0,0.55);
+
+  backdrop-filter:blur(8px);
+
+  border-radius:15px;
+
+  overflow:hidden;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card h3{
+  padding:20px;
+  font-size:24px;
+}
+
+/* POPULAR SPORTS */
+
+.popular{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.popular a{
+  display:block;
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(8px);
+  padding:20px 30px;
+  border-radius:10px;
+  font-size:20px;
+  color:inherit;
+  text-decoration:none;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.popular a:hover{
+  transform:translateY(-6px);
+}
+
+/* FOOTER */
+
+.footer{
+  text-align:center;
+
+  padding:30px;
+
+  margin-top:50px;
+
+  background:rgba(0,0,0,0.4);
+
+  backdrop-filter:blur(10px);
+}
+
+.popular div:hover{
+  transform:translateY(-5px);
+
+  background:rgba(239,68,68,0.8);
+}/* Survey page */
+.survey-page{
+  max-width:1100px;
+  margin:0 auto;
+  padding:60px 20px;
+  text-align:left;
+}
+
+.survey-page h2{
+  font-size:46px;
+  margin-bottom:10px;
+}
+
+.survey-page p{
+  color:#e5e7eb;
+  margin-bottom:30px;
+  max-width:760px;
+}
+
+.survey-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:40px;
+  align-items:start;
+}
+
+.survey-card,
+.survey-preview{
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(10px);
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.35);
+}
+
+.survey-field{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.survey-field label{
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#d1d5db;
+}
+
+.survey-field input,
+.survey-field select,
+.survey-field textarea{
+  border:none;
+  border-radius:12px;
+  padding:16px 18px;
+  background:rgba(255,255,255,0.08);
+  color:white;
+  font-size:16px;
+  outline:none;
+  min-height:44px;
+}
+
+.survey-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+.survey-field select option {
+  color: #111;
+  background: white;
+}
+
+.survey-field textarea{
+  min-height:140px;
+  resize:vertical;
+}
+
+.survey-actions{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.survey-button,
+.survey-delete{
+  padding:16px 28px;
+  border:none;
+  border-radius:999px;
+  font-size:16px;
+  cursor:pointer;
+  transition:transform 0.2s ease, opacity 0.2s ease;
+}
+
+.survey-button{
+  background:#ef4444;
+  color:white;
+}
+
+.survey-delete{
+  background:rgba(255,255,255,0.12);
+  color:#f3f4f6;
+}
+
+.survey-button:hover,
+.survey-delete:hover{
+  transform:translateY(-2px);
+}
+
+.survey-card p,
+.survey-preview p{
+  color:#d1d5db;
+}
+
+.survey-preview h3{
+  margin-bottom:10px;
+}
+
+.survey-preview .countdown{
+  margin:20px 0;
+  padding:18px 20px;
+  background:rgba(255,255,255,0.08);
+  border-radius:14px;
+  font-size:18px;
+}
+
+.survey-preview .status{
+  font-size:15px;
+  margin-bottom:16px;
+  color:#f8fafc;
+}
+
+.survey-preview .final{
+  color:#86efac;
+}
+
+.chat-page{
+  max-width:1100px;
+  margin:0 auto;
+  padding:60px 20px;
+  text-align:left;
+}
+
+.chat-page h2{
+  font-size:46px;
+  margin-bottom:10px;
+}
+
+.chat-page p{
+  color:#e5e7eb;
+  margin-bottom:30px;
+  max-width:760px;
+}
+
+.chat-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  margin-bottom:30px;
+}
+
+.chat-card{
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(10px);
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.35);
+}
+
+.chat-field{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.chat-field label{
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#d1d5db;
+}
+
+.chat-field input,
+.chat-field select,
+.chat-field textarea{
+  border:none;
+  border-radius:12px;
+  padding:16px 18px;
+  background:rgba(255,255,255,0.08);
+  color:white;
+  font-size:16px;
+  outline:none;
+  min-height:44px;
+}
+
+.chat-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-top:10px;
+}
+
+.chat-button,
+.chat-delete{
+  padding:16px 28px;
+  border:none;
+  border-radius:999px;
+  font-size:16px;
+  cursor:pointer;
+  transition:transform 0.2s ease, opacity 0.2s ease;
+}
+
+.chat-button{
+  background:#ef4444;
+  color:white;
+}
+
+.chat-delete{
+  background:rgba(255,255,255,0.12);
+  color:#f3f4f6;
+}
+
+.chat-button:hover,
+.chat-delete:hover{
+  transform:translateY(-2px);
+}
+
+.room-list{
+  display:grid;
+  gap:16px;
+}
+
+.room-row{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:center;
+  background:rgba(255,255,255,0.06);
+  padding:18px;
+  border-radius:14px;
+}
+
+.room-row p{
+  color:#d1d5db;
+  margin-top:6px;
+}
+
+.room-join{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.chat-room-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+  margin-bottom:20px;
+}
+
+.messages-box{
+  min-height:280px;
+  max-height:420px;
+  overflow:auto;
+  background:rgba(255,255,255,0.06);
+  border-radius:16px;
+  padding:18px;
+  margin-bottom:20px;
+}
+
+.empty-state{
+  color:#d1d5db;
+}
+
+.message-row{
+  margin-bottom:16px;
+  padding-bottom:12px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.message-user{
+  display:block;
+  font-weight:700;
+  margin-bottom:4px;
+}
+
+.message-time{
+  display:block;
+  font-size:13px;
+  color:#9ca3af;
+  margin-bottom:10px;
+}
+
+.chat-input-row{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.chat-input-row input{
+  flex:1;
+}
+
+.chat-status{
+  margin-top:24px;
+  color:#d1d5db;
+}
+
+@media (max-width: 940px) {
+  .survey-grid{
+    grid-template-columns:1fr;
+  }
+  .chat-grid{
+    grid-template-columns:1fr;
+  }
+}
