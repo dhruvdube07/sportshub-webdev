@@ -1,16 +1,54 @@
-# React + Vite
+# SportsHub WebDev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the SportsHub React app built with Vite.
 
-Currently, two official plugins are available:
+## Required environment variables
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The app uses Supabase and expects the following build-time env vars:
 
-## React Compiler
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_ANON_KEY`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Vercel deployment
 
-## Expanding the ESLint configuration
+If you deploy this repo on Vercel, add the env vars in the Vercel project settings:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Open your project in Vercel.
+2. Go to `Settings` → `Environment Variables`.
+3. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`.
+4. Redeploy the app.
+
+### Local development
+
+Create a `.env.local` file in the repo root with:
+
+```env
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key
+```
+
+Then run:
+
+```bash
+npm install
+npm run dev
+```
+
+## Run the app
+
+```bash
+git clone https://github.com/dhruvdube07/sportshub-webdev.git
+cd sportshub-webdev
+npm install
+npm run dev
+```
+
+## Deploying the app
+
+For Vercel, use these settings:
+
+- Build command: `npm run build`
+- Output directory: `dist`
+- Root directory: `/`
+
+If you built locally and pushed a static `dist` branch, make sure the env vars were set before build.
